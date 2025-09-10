@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import useDebounce from "@/hooks/useDebounce";
+import { useDebounce } from "@/hooks/useDebounce";
 
 export default function UseDebounceDemo() {
   const [text, setText] = useState("");

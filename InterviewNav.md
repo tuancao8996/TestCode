@@ -16,6 +16,52 @@
 
 15. Toán tử + Method + xử lý arr,object.
 
+//for in : ->  we can iterate through object keys
+//for of : -> Item
+
+
+//note : console.log
+<!-- Nếu thay đổi property của object trong function → ảnh hưởng tới object gốc.
+
+Nếu gán lại nguyên biến tham chiếu trong function → chỉ thay đổi cục bộ, không ảnh hưởng bên ngoài.
+
+Với primitive thì luôn là copy (pass by value). -->
+<!-- Khi lỗi xảy ra trong try, JS bỏ qua phần còn lại trong try và nhảy ngay sang catch. -->
+
+<!-- Sau khi IIFE chạy xong:
+
+x đã bị xoá (scope block).
+
+y thì vẫn tồn tại ở global scope. 
+(() => {
+  let x = (y = 10);
+})();
+
+console.log(typeof x);
+console.log(typeof y);
+// let x = y , y = 10; -> x la let (block-scope), y la global variable
+-->
+
+<!-- // index.js
+console.log('running index.js');
+import { sum } from './sum.js';
+console.log(sum(1, 2));
+
+// sum.js
+console.log('running sum.js');
+export const sum = (a, b) => a + b; -->        // import se chay truoc .
+
+<!-- async function luôn trả về Promise.
+
+Muốn lấy value thực sự phải dùng await hoặc .then().
+getData().then(console.log);
+// hoặc
+const data = await getData();
+console.log(data); // "I made it!" -->
+
+
+<!-- Khi bạn khai báo 1 function thông thường, JS sẽ tự động gắn cho nó một property prototype (object rỗng).
+Arrow function không có prototype property - > undefined -->
 
 
 

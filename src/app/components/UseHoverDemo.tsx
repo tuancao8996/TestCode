@@ -6,21 +6,22 @@ export default function UseHoverDemo() {
   const [ref, isHovered] = useHover<HTMLDivElement>();
 
   return (
-    <div className="w-full max-w-md rounded-xl border bg-white/70 dark:bg-black/20 backdrop-blur-sm p-5 shadow-sm hover:shadow-md transition-shadow space-y-3">
-      <div className="flex items-center justify-between">
-        <h3 className="font-semibold text-base">useHover</h3>
-        <span className="text-[10px] uppercase tracking-wide rounded-full px-2 py-0.5 bg-gray-100 dark:bg-white/10 text-gray-600 dark:text-gray-300">event</span>
+     <div className="rounded-xl border bg-white dark:bg-zinc-900 p-5 w-full max-w-sm">
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center gap-2">
+          <span className="inline-block h-2.5 w-2.5 rounded-full bg-violet-500" />
+          <h3 className="text-sm font-semibold text-violet-700 dark:text-violet-400">useHover</h3>
+        </div>
+        <span className="text-xs text-violet-600/70 dark:text-violet-300/70">Di chuột để xem trạng thái</span>
       </div>
       <div
         ref={ref}
-        className="h-24 rounded-md border grid place-items-center transition-colors"
-        style={{ backgroundColor: isHovered ? "#dbeafe" : "#f9fafb" }}
+        className="h-24 flex items-center justify-center rounded-lg border bg-violet-50 text-violet-800 dark:bg-violet-900/20 dark:text-violet-200"
       >
-        {isHovered ? "Hovering" : "Hover me"}
+        <span className="text-sm">{isHovered ? "Đang hover" : "Chưa hover"}</span>
       </div>
-      <div className="text-sm">isHovered: {String(isHovered)}</div>
     </div>
-  );
+  )
 }
 
 
